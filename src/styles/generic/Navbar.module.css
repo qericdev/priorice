@@ -1,0 +1,183 @@
+.nav {
+    color: #FFFFFF;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 4.5rem;
+    width: 100%;
+    border-bottom: 0.7px solid rgb(255, 255, 255, 27%);
+}
+
+.logo {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.tabs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 15em;
+}
+
+.tabs > li {
+    list-style: none;
+    padding: 0em 1.5em;
+    cursor: pointer;
+    position: relative; 
+}
+
+/* Using hover property combined with ::after to create a pseudo-element like a bar*/
+.tabs > li:hover::after {
+    content: '';
+    position: absolute;
+    bottom: -1.5rem;
+    left: 0;
+    background-color: #42BDEC;
+    width: 100%;
+    height: 4px;
+}
+
+.contact {
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    padding: 0.5em 1.5em;
+    font-size: 0.8125rem;
+    background-color: transparent;
+    color: #FFFFFF;
+    border: 1px solid #42BDEC;
+    border-radius: 6px;
+}
+
+.contact:hover {
+    border-color: #00ffff;
+}
+
+.burgerIconMenu {
+    display: none;
+}
+
+.responsiveMenuOff {
+    display: none;
+}
+
+.responsiveMenuOn { 
+    display: none;
+}
+
+.responsiveMenuOffFirstLoad {
+    display: none;
+} 
+
+@media (max-width: 1200px) {
+    .tabs {
+        padding-left: 1em;
+    }
+}
+
+@media (max-width: 1000px) {
+    .tabs {
+        padding-left: 0.5em;
+    }
+}
+
+@media (max-width: 750px) {
+    .nav {
+        flex-wrap: wrap;
+        height: auto;
+        min-height: 4.5rem;
+    }
+
+    .tabs {
+        display: none;
+    }
+
+    .contact {
+        display: none;
+    }
+
+    .burgerIconMenu {
+        display: block;
+        width: 50px;
+        cursor: pointer;
+        margin-top:0.75em;
+        margin-bottom: 0.75em;
+    }
+
+    .responsiveMenuOffFirstLoad {
+        display: none;
+    }
+
+    .responsiveMenuOff {
+        display:block;
+        width: 100%;
+        height: 255px;
+        margin: 0;
+        padding-left: 0;
+        animation-name: hiddenMenu;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+        animation-timing-function: linear;
+        overflow-y: hidden;
+    }
+
+    .responsiveMenuOff > li {
+        list-style: none;
+        text-align: center;
+        padding-top: 0.75em;
+        padding-bottom: 0.75em;
+        cursor: pointer;
+    }
+
+    .responsiveMenuOff > li:hover {
+        color:#00ffff;
+    }
+
+    @keyframes hiddenMenu {
+        50% {
+            height: 150px;
+        }
+
+        100% {
+            height: 0px;
+        }
+    }
+
+    .responsiveMenuOn {
+        display: block;
+        width: 100%;
+        margin:0;
+        box-sizing: border-box;
+        padding-left: 0;
+        height: 0;
+        animation-name: showMenu;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+        animation-timing-function: linear;
+        overflow-y: hidden;
+    }
+
+    @keyframes showMenu {
+        50% {
+            height: 150px;
+        }
+
+        100% {
+            height: 255px;
+        }
+    }
+
+    .responsiveMenuOn > li {
+        list-style: none;
+        text-align: center;
+        padding-top: 0.75em;
+        padding-bottom: 0.75em;
+        cursor: pointer;
+    }
+
+    .responsiveMenuOn > li:hover {
+        color:#00ffff;
+    }
+}
