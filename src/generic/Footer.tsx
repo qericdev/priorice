@@ -11,7 +11,7 @@ function Footer() : JSX.Element {
                 <input id="site-search" type="search"></input>
             </section>
             <section className={styles.social}>
-
+                <img alt="facebook"/>
             </section>
         </footer>
     );
