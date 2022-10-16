@@ -1,5 +1,146 @@
 .footer {
     display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    box-sizing: border-box;
+    padding: 3em;
+
+}
+
+.keywords {
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 1em;
+}
+
+.keywords > h3 {
+    padding: 0;
+    margin: 0;
+}
+
+.tags {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-left: 0;
+}
+
+.tags > li {
+    list-style: none;
+    padding: 0.5em 1em;
+    background: rgba(196, 196, 196, 0.19);
+    border-radius: 3px;
+    margin-right: 1em;
+    margin-bottom: 1em;
+    cursor: pointer;
+    font-size: 0.8rem;
+}
+
+.tags > li:hover {
+    background: rgba(196, 196, 196, 0.09);
+}
+
+.search {
+    width: 25%;
+    border-right: 1px solid #ffffff;
+    border-left: 1px solid #ffffff;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 1em;
+}
+
+.search > label {
+    margin-bottom: 1em;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    width: 80%;
+}
+
+.searchButton {
+    display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+}
+
+.searchButton > input {
+    height: 2em;
+    width: 85%;
+}
+
+.searchButton > button {
+    background-color: #6E00FA;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    border-width: 0;
+    border-radius: 0.3em;
+    height: 2em;
+    padding: 0.1em 0.5em;
+    cursor: pointer;
+    width: 15%;
+}
+
+.search > h4 {
+    margin-bottom: 1em;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    text-align: left;
+}
+
+.search > p {
+    margin-top: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    font-size: 0.8rem;
+}
+
+.social {
+    width: 50%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 1em;
+}
+
+.social > h4 {
+    margin-bottom: 1em;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    text-align: left;
+}
+
+.social > h4:nth-child(1) {
+    margin-top: 0;
+}
+
+.social > p {
+    margin-top: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    font-size: 0.8rem;
+}
+
+.social > img {
+    width: 35px;
+    margin-top: 0;
+    margin-left: auto;
+    margin-right: 10%;
+    cursor:pointer;
 }

@@ -1,9 +1,12 @@
 .nav {
     color: #FFFFFF;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     height: 4.5rem;
+    box-sizing: border-box;
+    padding-left: 3em;
+    padding-right: 3em;
     width: 100%;
     border-bottom: 0.7px solid rgb(255, 255, 255, 27%);
 }

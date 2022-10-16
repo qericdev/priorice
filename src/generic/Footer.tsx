@@ -5,13 +5,32 @@ function Footer() : JSX.Element {
         <footer className={styles.footer}>
             <section className={styles.keywords}>
                 <h3>Keywords</h3>
+                <ul className={styles.tags}>
+                    <li>Web Design</li>
+                    <li>Javascript</li>
+                    <li>React</li>
+                    <li>Typescript</li>
+                    <li>Responsive</li>
+                    <li>Php</li>
+                    <li>Java</li>
+                    <li>Wordpress</li>
+                </ul>
             </section>
             <section className={styles.search}>
-                <label for="site-search">Search in the site:</label>
-                <input id="site-search" type="search"></input>
+                <label htmlFor="site-search">Search in the site</label>
+                <div className={styles.searchButton}>
+                    <input id="site-search" type="search"></input>
+                    <button><img src="./../../images/generic/loupe.png"/></button>
+                </div>
+                <h4>Custom Designs</h4>
+                <p>Based on your business rules</p>
             </section>
             <section className={styles.social}>
-                <img alt="facebook"/>
+                <h4>Responsive Designs</h4>
+                <p>Adaptable to different screen sizes</p>
+                <h4>Scalable Design</h4>
+                <p>Adaptable to the growth of your business</p>
+                <img alt="facebook" src="./../../images/generic/facebook.png"/>
             </section>
         </footer>
     );
