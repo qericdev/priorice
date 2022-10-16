@@ -184,3 +184,10 @@
         color:#00ffff;
     }
 }
+
+@media (max-width:300px) {
+    .nav {
+        padding-left:1em;
+        padding-right: 1em;
+    }
+}
