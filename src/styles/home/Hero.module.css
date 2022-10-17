@@ -1,0 +1,279 @@
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    padding-top: 3em;
+    padding-bottom: 3em;
+    padding-left: 3em;
+    padding-right: 3em;
+    width: 100%;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    width: 40%;
+}
+
+.title {
+    line-height: 2;
+}
+
+.title > span {
+    color: #41BBEA;
+    text-transform: uppercase;
+}
+
+.quote {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    padding: 0.35em 1em;
+    background-color: rgba(255, 255, 255, 0.44);
+    color:#070D18;
+    margin-top:3rem;
+    margin-bottom: 3rem;
+}
+
+.quote > p {
+    margin: 0;
+}
+
+.entity {
+    background-color: #FFFFFF;
+    color: #070D18;
+    padding: 0.1em 0.5em 0.25em 0.5em;
+    font-size: 1.4rem;
+    border-radius: 8px;
+    margin-left: 1.5rem !important;
+    cursor:pointer;
+}
+
+.statistics {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.figures {
+    margin: 1rem 2rem;
+}
+
+.figures > h4 {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.figures > p {
+    font-size: 0.8rem;
+}
+
+/* _______________LEFT SECTION_______________*/
+
+.left {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.card {
+    margin-top: 4rem;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 22px;
+    width: 231px;
+    padding: 1.5em;
+    box-sizing: border-box;
+}
+
+.avatar {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 0;
+}
+
+.avatar > h5 {
+    font-size: 0.9rem;
+    margin: 0 auto 0 1rem;
+}
+
+.rating {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.rating > img {
+    margin:0 0.1em;
+    padding: 0;
+}
+
+.rating > p {
+    margin-left: 1rem;
+    font-size: 0.7rem;
+}
+
+.description > h4 {
+    font-size: 0.9rem;
+    padding:0;
+    margin-top: 0.4rem;
+    margin-bottom: 0.4rem;
+}
+.description > p {
+    margin-top:0;
+    font-size: 0.7rem;
+    padding:0;
+}
+
+.bell {
+    margin-left: auto;
+    margin-right: 0;
+    margin-top: 4rem;
+}
+
+/* _______________RIGHTSECTION_______________*/
+
+.right {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.characteristics {
+    background-color: rgba(255, 255, 255, 0.36);
+    border-radius: 22px;
+    width:231px;
+    height: 238px;
+    position: relative;
+}
+
+.front {
+    background-color: #FFFFFF;
+    color:#070D18;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    padding: 1em;
+    position: absolute;
+    left: -4rem;
+    top: 2rem;
+    width: 190px;
+}
+
+.serviceDetails {
+    margin-left: 0.7rem;
+}
+
+.serviceDetails > p {
+    font-size: 0.85rem;
+    font-weight: 700;
+    margin: 0;
+    margin-bottom: 0.5rem;
+}
+
+.serviceTags {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.serviceTags > p {
+    background-color: #F2F2F2;
+    font-size: 0.7rem;
+    margin-right: 1rem;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.serviceTags > p:nth-child(1) {
+    color:  #828282;
+}
+
+.serviceTags > p:nth-child(2) {
+    color:  #FD5B71;
+}
+
+.back {
+    background-color: #FFFFFF;
+    color:#070D18;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    padding: 1em;
+    position: absolute;
+    left: 4rem;
+    top: 8rem;
+    width: 190px;
+}
+
+
+@media (max-width: 1100px) {
+    .left {
+        display: none;
+    }
+
+    .center {
+        width: 70%;
+    }
+
+    .right {
+        width: 30%;
+    }
+}
+
+@media (max-width: 950px) {
+    .hero {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 380px) {
+    .front {
+        left: -1rem;
+    }
+
+    .back {
+        left: 2rem;
+    }
+}
+
+@media (max-width: 300px) {
+    .characteristics {
+        width:191px;
+        height: 368px;
+    }
+
+    .front {
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+        width: 130px;
+        flex-direction: column;
+    }
+
+    .back {
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+        width: 130px;
+        flex-direction: column;
+        top: 13rem;
+    }
+    
+    .serviceDetails {
+        margin-top: 1rem;
+    }
+}

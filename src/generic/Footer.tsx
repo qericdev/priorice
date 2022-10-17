@@ -30,7 +30,7 @@ function Footer() : JSX.Element {
                 <p>Adaptable to different screen sizes</p>
                 <h4>Scalable Design</h4>
                 <p>Adaptable to the growth of your business</p>
-                <img alt="facebook" src="./../../images/generic/facebook.png"/>
+                <a target="_blank" href="https://www.facebook.com/priorice/"><img alt="facebook" src="./../../images/generic/facebook.png"/></a>
             </section>
         </footer>
     );
