@@ -277,3 +277,11 @@
         margin-top: 1rem;
     }
 }
+
+@media (max-width: 250px) {
+  
+
+    .figures {
+        margin: 1rem 1rem;
+    }
+}
