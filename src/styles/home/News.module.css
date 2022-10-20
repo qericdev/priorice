@@ -1,0 +1,95 @@
+.section {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding-top: 3em;
+    padding-bottom: 3em;
+    padding-left: 3em;
+    padding-right: 3em;
+    width: 100%;
+    background-color: #FFFFFF;
+    color:#070D18;
+}
+
+.section > p {
+    letter-spacing: 0.01em;
+    color: #505050;
+    text-align: center;
+}
+
+.articles {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.article {
+    width:250px;
+    margin:1.5rem;
+}
+
+.article > time {
+    display: block;
+    margin: 1em 0;
+    letter-spacing: 0.01em;
+    color: #6A6A6A;
+}
+
+.article > figure {
+    margin: 0;
+    width:250px;
+    height:200px;
+}
+
+.article > figure > img {
+    border-radius: 10px;
+    width: 250px;
+    height:200px;
+    object-fit: cover;
+}
+
+.article > p {
+    text-align: justify;
+    line-height: 210.9%;
+    letter-spacing: 0.01em;
+    color: #424242;
+    width:250px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 5;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.article > a {
+    font-weight: 600;
+    display: block;
+    width: 100%;
+    text-align: right;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@media (max-width: 290px) {
+    .article {
+        width:170px;
+        margin:1.5rem;
+    }
+
+    .article > figure {
+        width:170px;
+    }
+    
+    .article > figure > img {
+        width: 170px;
+    }
+
+    .article > p {
+        width:170px;
+    }
+}
+

@@ -17,7 +17,7 @@
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    padding: 4em 0;
+    padding: 2em 0;
 }
 
 .statistic {
@@ -40,6 +40,7 @@
     position: absolute;
     bottom: -2rem;
     left: 13rem;
+    z-index:2;
 }
 
 .vectorOne {
@@ -88,6 +89,7 @@
     .statistic {
         margin:1em 0em;
     }
+
     .statistic > h1 {
         font-size: 2.5rem;
     }
