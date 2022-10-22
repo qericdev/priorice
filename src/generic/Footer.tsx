@@ -20,7 +20,7 @@ function Footer() : JSX.Element {
                 <label htmlFor="site-search">Search in the site</label>
                 <div className={styles.searchButton}>
                     <input id="site-search" type="search"></input>
-                    <button><img src="./../../images/generic/loupe.png"/></button>
+                    <button><img alt="search button" src="./../../images/generic/loupe.png"/></button>
                 </div>
                 <h4>Custom Designs</h4>
                 <p>Based on your business rules</p>
@@ -30,7 +30,7 @@ function Footer() : JSX.Element {
                 <p>Adaptable to different screen sizes</p>
                 <h4>Scalable Design</h4>
                 <p>Adaptable to the growth of your business</p>
-                <a target="_blank" href="https://www.facebook.com/priorice/"><img alt="facebook" src="./../../images/generic/facebook.png"/></a>
+                <a target="_blank" rel="noreferrer" href="https://www.facebook.com/priorice/"><img alt="facebook" src="./../../images/generic/facebook.png"/></a>
             </section>
         </footer>
     );

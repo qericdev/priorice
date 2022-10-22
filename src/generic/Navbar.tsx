@@ -1,4 +1,5 @@
 import styles from './../styles/generic/Navbar.module.css';
+import {Link} from 'react-router-dom';
 import {useState, useEffect} from 'react';
 
 function Navbar() : JSX.Element {
@@ -28,8 +29,12 @@ function Navbar() : JSX.Element {
         <nav id="nav" className={styles.nav}>
             <p className={styles.logo}>PRIORICE</p>
             <menu className={styles.tabs}>
-                <li>Home</li>
-                <li>About Us</li>
+                <li>
+                    <Link className={styles.link} to={'/'}>Home</Link> 
+                </li>
+                <li>
+                    <Link className={styles.link} to={'/about'}>About Us</Link> 
+                </li>
                 <li>Services</li>
                 <li>News</li>
             </menu>
