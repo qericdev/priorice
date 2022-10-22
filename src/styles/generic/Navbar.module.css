@@ -138,7 +138,7 @@
         cursor: pointer;
     }
 
-    .responsiveMenuOff > li:hover {
+    .responsiveMenuOff > li > Link:hover {
         color:#00ffff;
     }
 
@@ -184,7 +184,7 @@
         cursor: pointer;
     }
 
-    .responsiveMenuOn > li:hover {
+    .link:hover {
         color:#00ffff;
     }
 }
