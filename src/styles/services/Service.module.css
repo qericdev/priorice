@@ -1,0 +1,115 @@
+.service {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    padding-top: 4em;
+    padding-bottom: 4em;
+    padding-left: 5em;
+    padding-right: 5em;
+    width: 100%;
+    background-color: #FFFFFF;
+    color: #000000;
+    margin: 0;
+}
+
+.service > h1 {
+    letter-spacing: 0.01em;
+    font-size: 2rem;
+}
+
+.service > h1 > span {
+    color: #42BDEC;
+}
+
+.serviceOverview {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 2em;
+}
+
+.serviceOverviewReverse {
+    flex-direction: row-reverse;
+}
+
+.serviceImage {
+    width: 45%;
+}
+
+.serviceDescription {
+    width: 45%;
+}
+
+.serviceDescription > h2 {
+    font-size: 1.375rem;
+    line-height: 177.9%;
+    letter-spacing: 0.01em;
+}
+
+.serviceDescription > p {
+    line-height: 210.9%;
+    letter-spacing: 0.01em;
+    color: #424242;
+    text-align: justify;
+}
+
+.serviceDescription > button {
+    padding: 0.75em 1.25em;
+    background-color: #000000;
+    color:#FFFFFF;
+    cursor: pointer;
+}
+
+@media (max-width: 900px) {
+    .service {
+        padding-left: 3em;
+        padding-right:3em;
+    }
+
+    .serviceImage {
+        width: 80%;
+    }
+    
+    .serviceDescription {
+        width: 80%;
+    }
+
+    .serviceOverview {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 600px) {
+    .service {
+        padding-left: 1em;
+        padding-right:1em;
+    }
+    .serviceImage {
+        width: 95%;
+    }
+    
+    .serviceDescription {
+        width: 95%;
+    }
+    .serviceOverview {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 300px) {
+
+    .service {
+        padding-left: 0.5em;
+        padding-right:0.5em;
+    }
+
+    .service > h1 {
+        text-align: center;
+    }
+
+    .serviceOverview {
+        flex-direction: column;
+    }
+}

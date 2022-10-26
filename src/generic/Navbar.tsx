@@ -35,7 +35,9 @@ function Navbar() : JSX.Element {
                 <li>
                     <Link className={styles.link} to={'/about'}>About Us</Link> 
                 </li>
-                <li>Services</li>
+                <li>
+                    <Link className={styles.link} to={'/services'}>Services</Link>
+                </li>
                 <li>News</li>
             </menu>
             <button className={styles.contact}>Contact Us</button>
@@ -48,7 +50,9 @@ function Navbar() : JSX.Element {
                 <li>
                     <Link className={styles.link} to={'/about'}>About Us</Link> 
                 </li>
-                <li>Services</li>
+                <li>
+                    <Link className={styles.link} to={'/services'}>Services</Link>
+                </li>
                 <li>News</li>
                 <li>Contact Us</li>
             </menu>
