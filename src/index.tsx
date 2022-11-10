@@ -8,6 +8,8 @@ import './index.css';
 import App from './App';
 import About from './About';
 import Services from './Services';
+import News from './News';
+import Contact from './Contact';
 
 
 const router = createBrowserRouter([
@@ -22,6 +24,14 @@ const router = createBrowserRouter([
   {
     path: "services",
     element: <Services />
+  },
+  {
+    path: "news",
+    element: <News />
+  },
+  {
+    path: "contact",
+    element: <Contact />
   }
 ])
 

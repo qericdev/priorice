@@ -38,9 +38,11 @@ function Navbar() : JSX.Element {
                 <li>
                     <Link className={styles.link} to={'/services'}>Services</Link>
                 </li>
-                <li>News</li>
+                <li>
+                    <Link className={styles.link} to={'/news'}>News</Link>
+                </li>
             </menu>
-            <button className={styles.contact}>Contact Us</button>
+            <button className={styles.contact}><Link className={styles.link} to={'/contact'}>Contact Us</Link></button>
             {/* responsiveMenu Class is the design for the menu in small screens, by default in Desktops it is display as none */}
             <img onClick={showMenu} alt="menu" className={styles.burgerIconMenu} src="./../../images/generic/menu-icon.png"/>
             <menu className={menu ? styles.responsiveMenuOn : isFirstLoad ? styles.responsiveMenuOffFirstLoad : styles.responsiveMenuOff}>
@@ -53,8 +55,12 @@ function Navbar() : JSX.Element {
                 <li>
                     <Link className={styles.link} to={'/services'}>Services</Link>
                 </li>
-                <li>News</li>
-                <li>Contact Us</li>
+                <li>
+                    <Link className={styles.link} to={'/news'}>News</Link>
+                </li>
+                <li>
+                    <Link className={styles.link} to={'/contact'}>Contact Us</Link>
+                </li>
             </menu>
         </nav>
     );

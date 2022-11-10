@@ -3,7 +3,7 @@ import Footer from './generic/Footer';
 import HeroAbout from './about/HeroAbout';
 import Team from './about/Team';
 import Partner from './about/Partner';
-import Subscribe from './about/Subscribe';
+import Subscribe from './generic/Subscribe';
 
 function About() : JSX.Element {
     return (
