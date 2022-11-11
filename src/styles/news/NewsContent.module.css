@@ -10,3 +10,89 @@
     color: #000000;
 }
 
+.hero {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    padding: 2em 0;
+}
+
+.hero h1 {
+    font-size: 2.625rem;
+    margin: 0;
+}
+
+.hero h1:nth-child(1) {
+    margin-top: 3rem;
+}
+
+.highlight {
+    color: #42BDEC;
+}
+
+.hero img {
+    position: absolute;
+}
+
+.hero p {
+    font-size: 1.25rem;
+    line-height: 189.5%;
+    color: #777777;
+}
+
+.hero input {
+    background-color: #F1F1F1;
+    width: 70%;
+    height: 49px;
+    max-width: 300px;
+    border: 0;
+    padding: 1em 2em;
+    color: #727272;
+}
+
+.bell {
+    left: 4rem;
+}
+
+.bulb {
+    top :0;
+    right: 4rem;
+}
+
+.leftDecoration {
+    left: -3rem;
+    top: 2rem;
+}
+
+.rightDecoration {
+    right: 3rem;
+    bottom: 1rem;
+}
+
+@media (max-width: 1100px) {
+    .rightDecoration {
+        display: none;
+    }
+}
+
+@media (max-width: 900px) {
+    .bulb, .bell, .leftDecoration {
+        display: none;
+    }
+}
+
+@media (max-width: 500px) {
+    .hero input {
+        width: 85%;
+    }
+}
+
+@media (max-width: 300px) {
+    .hero h1{
+        font-size: 2rem;
+    }
+
+    .hero input {
+        width: 100%;
+    }
+}
