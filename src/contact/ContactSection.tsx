@@ -25,10 +25,13 @@ function ContactSection() {
             </form>
           
             <div className={styles.details}>
-                <h1>Address</h1>
-                <p>Lima, Peru</p>
+                <img className={styles.backgroundContact} alt='contact us' src='./../../images/contact/contact-min.png'/>
+                <section className={styles.direction}>
+                    <h1>Address</h1>
+                    <p>Lima, Peru</p>
+                </section>
                 <div>
-                    <p>993308766</p>
+                    <p>(511) 993308766</p>
                     <p>qericrm@gmail.com</p>
                     <p>www.priorice.com</p>
                 </div>
