@@ -1,13 +1,21 @@
-import {useState, useEffect} from 'react'
 import styles from './../styles/news/NewsContent.module.css'
 import {data} from './../Data';
 
 function News() : JSX.Element {
 
-    const [news, setNews] = useState<String>(" ");
-    useEffect(() => {
-        
-    },[]);
+    const listItems : JSX.Element[] = data.slice(1).map(elem => 
+                                        <div key={elem.id} className={styles.newsSection}>
+                                            <img alt={elem.title} src={elem.image}/>
+                                            <h1>{elem.title}</h1>
+                                            <p>{elem.summary}</p>
+                                            <div className={styles.avatar}>
+                                                <img alt="author" src={elem.avatar}/>
+                                                <div className={styles.avatarDetails}>
+                                                    <p>{elem.author}</p>
+                                                    <p>{elem.date}</p>
+                                                </div>
+                                            </div>
+                                        </div>);
 
     return (
         <div className={styles.container}>
@@ -39,6 +47,7 @@ function News() : JSX.Element {
                     </div>
                 </div>
                 <div className={styles.pastNews}>
+                    {listItems}
                 </div>
             </section>
         </div>
