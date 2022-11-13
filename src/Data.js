@@ -1,3 +1,10 @@
+export const statistics = {
+    "projects" : 11,
+    "clients" : 6,
+    "transactions" : 20,
+    "customers" : 200
+}
+
 export const data = [
     {
         "id" : "3",

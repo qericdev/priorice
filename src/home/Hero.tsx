@@ -1,7 +1,34 @@
+import {useState, useEffect, useRef} from 'react';
 import styles from './../styles/home/Hero.module.css';
+import { statistics } from './../Data';
 import {Link} from 'react-router-dom';
 
 function Hero() : JSX.Element{
+
+    const [projects, setProjects] = useState<number>(0);
+    const [launch] = useState<number>((Date.now() - new Date("09/27/2020").getTime()) / (1000 * 60 * 60 * 24));
+    const [days, setDays] = useState<number>(0);
+    const projectsInterval = useRef<NodeJS.Timer>();
+    const daysInterval = useRef<NodeJS.Timer>();
+ 
+    useEffect(() => {
+        if (projects >= statistics.projects) {
+            clearInterval(projectsInterval.current);
+        }
+        if (days >= launch) {
+            clearInterval(daysInterval.current);
+        }
+    },[projects, days, launch])
+
+    useEffect(() => {
+        projectsInterval.current = setInterval(() => setProjects(prevProjects => prevProjects + 1), 100);
+        daysInterval.current = setInterval(() => setDays(prevDays => prevDays + 10), 25);
+        return () => {
+            clearInterval(projectsInterval.current);
+            clearInterval(daysInterval.current);
+        }
+    },[])
+
     return (
         <div className={styles.hero}>
             <div className={styles.left}>
@@ -34,11 +61,11 @@ function Hero() : JSX.Element{
                 </div>
                 <div className={styles.statistics}>
                     <div className={styles.figures}>
-                        <h4>10+</h4>
+                        <h4>{projects}</h4>
                         <p>Projects<br/>Completed</p>
                     </div>
                     <div className={styles.figures}>
-                        <h4>750</h4>
+                        <h4>{days}</h4>
                         <p>Days<br/>Online</p>
                     </div>
                 </div>
