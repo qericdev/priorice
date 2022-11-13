@@ -1,4 +1,5 @@
 import styles from './../styles/home/Hero.module.css';
+import {Link} from 'react-router-dom';
 
 function Hero() : JSX.Element{
     return (
@@ -29,7 +30,7 @@ function Hero() : JSX.Element{
                 <p className={styles.description}>Put your business online by our tech solutions and experience</p>
                 <div className={styles.quote}>
                     <p>Get a Quote</p>
-                    <p className={styles.entity}>&rarr;</p>
+                    <Link className={styles.entity} to={'/contact'}>&rarr;</Link>
                 </div>
                 <div className={styles.statistics}>
                     <div className={styles.figures}>
