@@ -24,7 +24,7 @@ function About() : JSX.Element{
                     <figure>
                         <img alt="tayler" src="./../../images/home/clock.png"/>
                     </figure>
-                    <h3>Tailer Mode Development</h3>
+                    <h3>Available on Time</h3>
                     <p>Scalable and dynamic systems with the ever-changing trends to meet your dynamic business needs</p>
                 </div>
             </div>

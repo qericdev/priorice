@@ -7,8 +7,8 @@ function Service() :JSX.Element{
             <div className={styles.serviceOverview}>
                 <img className={styles.serviceImage} alt="web development" src="./../../images/services/web.png" />
                 <div className={styles.serviceDescription}>
-                    <h2>1. Web and Software Development</h2>
-                    <p>From automation to advanced analytics and seamless experiences, we can embed AI in business. We'll deliver new operating models and strategic intelligence for smart processes and data-driven decisions. What, Why and How?</p>
+                    <h2>1. Web Development</h2>
+                    <p>Having a well-crafted website is always an excellent decision. We put our experience at your service so that you can have a well-designed, scalable, fast, secure website ready to start positioning yourself in the first places.</p>
                     <button>Read More</button>
                 </div>
             </div>
@@ -16,7 +16,7 @@ function Service() :JSX.Element{
                 <img className={styles.serviceImage} alt="mobile development" src="./../../images/services/android.png"/>
                 <div className={styles.serviceDescription}>
                     <h2>2. Mobile Application Development</h2>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an type and scrambled it to make a type specimen book. It has survived not only five centu</p>
+                    <p>We develop fast and secure mobile applications always thinking about the satisfaction of the end user. Extend your business with new features.</p>
                     <button>Read More</button>
                 </div>
             </div>
@@ -24,7 +24,7 @@ function Service() :JSX.Element{
                 <img className={styles.serviceImage} alt="seo" src="./../../images/services/seo.png"/>
                 <div className={styles.serviceDescription}>
                     <h2>3. SEO</h2>
-                    <p>From automation to advanced analytics and seamless experiences, we can embed AI in business. We'll deliver new operating models and strategic intelligence for smart processes and data-driven decisions. What, Why and How?</p>
+                    <p>How important it is to show your website in the first places of the search engine. The higher it is, the CAC (Customer Acquisition Cost) will be lower for your business. Take the next step now.</p>
                     <button>Read More</button>
                 </div>
             </div>
@@ -32,7 +32,7 @@ function Service() :JSX.Element{
                 <img className={styles.serviceImage} alt="marketing" src="./../../images/services/marketing.png"/>
                 <div className={styles.serviceDescription}>
                     <h2>4. Digital Marketing</h2>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an type and scrambled it to make a type specimen book. It has survived not only five centu.</p>
+                    <p>Advertising on social networks is extremely important for the growth of your business. You will be able to open yourself to new markets much faster and at a relatively lower cost.</p>
                     <button>Read More</button>
                 </div>
             </div>

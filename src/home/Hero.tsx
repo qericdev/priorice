@@ -6,7 +6,7 @@ function Hero() : JSX.Element{
             <div className={styles.left}>
                 <div className={styles.card}>
                     <div className={styles.avatar}>
-                        <img alt="avatar" src="./../../images/home/avatar.png"/>
+                        <img alt="avatar" src="./../../images/home/avatar-customer.png"/>
                         <h5>Daniel C.</h5>
                     </div>
                     <div className={styles.rating}>
@@ -33,7 +33,7 @@ function Hero() : JSX.Element{
                 </div>
                 <div className={styles.statistics}>
                     <div className={styles.figures}>
-                        <h4>15+</h4>
+                        <h4>10+</h4>
                         <p>Projects<br/>Completed</p>
                     </div>
                     <div className={styles.figures}>
@@ -51,7 +51,7 @@ function Hero() : JSX.Element{
                             <p>Web Development</p>
                             <div className={styles.serviceTags}>
                                 <p>React</p>
-                                <p>Typescript</p>
+                                <p>Javascript</p>
                             </div>
                         </div>
                     </div>
@@ -61,7 +61,7 @@ function Hero() : JSX.Element{
                             <p>Backend</p>
                             <div className={styles.serviceTags}>
                                 <p>Php</p>
-                                <p>Database</p>
+                                <p>Java</p>
                             </div>
                         </div>
                     </div>

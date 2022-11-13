@@ -99,6 +99,10 @@
     margin-bottom: 0;
 }
 
+.avatar > img {
+    width: 50px;
+}
+
 .avatar > h5 {
     font-size: 0.9rem;
     margin: 0 auto 0 1rem;

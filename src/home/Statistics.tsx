@@ -13,11 +13,11 @@ function Statistics() : JSX.Element {
                     <p>Completed Projects</p>
                 </div>
                 <div className={styles.statistic}>
-                    <h1>7M</h1>
+                    <h1>20K</h1>
                     <p>Transactions</p>
                 </div>
                 <div className={styles.statistic}>
-                    <h1>6000+</h1>
+                    <h1>200+</h1>
                     <p>Customers</p>
                 </div>
             </div>
