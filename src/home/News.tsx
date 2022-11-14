@@ -1,5 +1,6 @@
 import styles from './../styles/home/News.module.css';
 import {data} from './../Data';
+import {Link} from 'react-router-dom';
 function News() : JSX.Element {
 
     const content : JSX.Element[] = data.map(elem => 
@@ -8,9 +9,9 @@ function News() : JSX.Element {
                                             <img alt={elem.title} src={elem.image}/>
                                         </figure>
                                         <time>{elem.date}</time>
-                                        <h1>{elem.title}</h1>
-                                        <p>{elem.summary}.</p>
-                                        <a href="https://developer.mozilla.org/en-US/" rel="noreferrer" target="_blank">Read more &rarr;</a>
+                                        <h1><Link className={styles.link} to={`/news/${elem.id}`}>{elem.title}</Link></h1>
+                                        <p><Link className={styles.link} to={`/news/${elem.id}`}>{elem.summary}.</Link></p>
+                                        <Link className={`${styles.link} ${styles.strongLink}`} to={`/news/${elem.id}`}>Read more &rarr;</Link>
                                     </article>);
 
     return (

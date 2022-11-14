@@ -113,6 +113,14 @@
     margin: 0;
 }
 
+.link {
+    text-decoration: none;
+    color: inherit;
+}
+.link:hover {
+    text-decoration: underline;
+}
+
 .newsDetails p {
     line-height: 210.9%;
     letter-spacing: 0.01em;

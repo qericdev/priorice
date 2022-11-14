@@ -45,6 +45,14 @@
     height:200px;
 }
 
+.link {
+    text-decoration: none;
+    color: inherit;
+}
+.link:hover {
+    text-decoration: underline;
+}
+
 .article > figure > img {
     border-radius: 10px;
     width: 250px;
@@ -65,7 +73,7 @@
     text-overflow: ellipsis;
 }
 
-.article > a {
+.strongLink {
     font-weight: 600;
     display: block;
     width: 100%;

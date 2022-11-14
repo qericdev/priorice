@@ -10,6 +10,7 @@ import About from './About';
 import Services from './Services';
 import News from './News';
 import Contact from './Contact';
+import SelectedNew from './news/SelectedNew';
 
 
 const router = createBrowserRouter([
@@ -27,7 +28,11 @@ const router = createBrowserRouter([
   },
   {
     path: "news",
-    element: <News />
+    element: <News />,
+  },
+  {
+    path: "news/:newsId",
+    element: <SelectedNew />,
   },
   {
     path: "contact",

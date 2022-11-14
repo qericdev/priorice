@@ -1,4 +1,5 @@
-import styles from './../styles/news/NewsContent.module.css'
+import styles from './../styles/news/NewsContent.module.css';
+import {Link} from 'react-router-dom';
 import {data} from './../Data';
 
 function News() : JSX.Element {
@@ -6,8 +7,8 @@ function News() : JSX.Element {
     const listItems : JSX.Element[] = data.slice(1).map(elem => 
                                         <div key={elem.id} className={styles.newsSection}>
                                             <img alt={elem.title} src={elem.image}/>
-                                            <h1>{elem.title}</h1>
-                                            <p>{elem.summary}</p>
+                                            <h1><Link className={styles.link} to={`/news/${elem.id}`}>{elem.title}</Link></h1>
+                                            <p><Link className={styles.link} to={`/news/${elem.id}`}>{elem.summary}</Link></p>
                                             <div className={styles.avatar}>
                                                 <img alt="author" src={elem.avatar}/>
                                                 <div className={styles.avatarDetails}>
@@ -35,8 +36,8 @@ function News() : JSX.Element {
                         <img alt={data[0].title} src={data[0].image}/>
                     </div>
                     <div className={styles.newsDetails}>
-                        <h1>{data[0].title}</h1>
-                        <p>{data[0].summary}</p>
+                        <h1><Link className={styles.link} to={`/news/${data[0].id}`}>{data[0].title}</Link></h1>
+                        <p><Link className={styles.link} to={`/news/${data[0].id}`}>{data[0].summary}</Link></p>
                         <div className={styles.avatar}>
                             <img alt="avatar" src={data[0].avatar}/>
                             <div className={styles.avatarDetails}>
