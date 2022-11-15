@@ -67,6 +67,7 @@
     border-radius: 20px;
     width: 70%;
     text-align: justify;
+    white-space: pre-wrap;
     margin-bottom: 2rem;
 }
 

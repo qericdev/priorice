@@ -33,7 +33,7 @@ function SelectedNew() : JSX.Element {
                     <img alt={elem.title} src={`./../../${elem.image}`}/>
                     <p>{elem.summary}</p>
                 </div>
-                <p className={styles.content}>{elem.content}</p>
+                <p dangerouslySetInnerHTML={{__html:`${elem.content}`}} className={styles.content}></p>
                 <div className={styles.avatar}>
                     <img alt="author" src={`./../../${elem.avatar}`}/>
                     <div className={styles.avatarDetails}>
