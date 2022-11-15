@@ -1,6 +1,7 @@
 import styles from './../styles/home/News.module.css';
 import {data} from './../Data';
 import {Link} from 'react-router-dom';
+
 function News() : JSX.Element {
 
     const content : JSX.Element[] = data.map(elem => 
