@@ -7,8 +7,13 @@ import Statistics from './home/Statistics';
 import News from './home/News';
 import Footer from './generic/Footer';
 function App() : JSX.Element {
+
+  function toTheTop () : void {
+    window.scrollTo({top: 0, behavior: 'smooth'});
+}
+
   return (
-    <div className="App">
+    <div onLoad={toTheTop} className="App">
       <Navbar />
       <Hero />
       <About />

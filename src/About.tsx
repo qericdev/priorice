@@ -6,8 +6,13 @@ import Partner from './about/Partner';
 import Subscribe from './generic/Subscribe';
 
 function About() : JSX.Element {
+
+    function toTheTop () : void {
+        window.scrollTo({top: 0, behavior: 'smooth'});
+    }
+    
     return (
-        <div>
+        <div onLoad={toTheTop}>
             <Navbar />
             <HeroAbout />
             <Team />

@@ -4,8 +4,13 @@ import Subscribe from "./generic/Subscribe";
 import NewsContent from "./news/NewsContent";
 
 function News() : JSX.Element {
+
+    function toTheTop () : void {
+        window.scrollTo({top: 0, behavior: 'smooth'});
+    }
+
     return (
-        <section>
+        <section onLoad={toTheTop}>
             <Navbar />
             <NewsContent />
             <Subscribe />

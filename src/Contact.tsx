@@ -3,8 +3,13 @@ import Footer from "./generic/Footer";
 import ContactSection from "./contact/ContactSection";
 
 function Contact() : JSX.Element {
+
+    function toTheTop () : void {
+        window.scrollTo({top: 0, behavior: 'smooth'});
+    }
+
     return (
-        <section>
+        <section onLoad={toTheTop}>
             <Navbar />
             <ContactSection />
             <Footer />

@@ -2,7 +2,7 @@ import Navbar from '../generic/Navbar';
 import Footer from '../generic/Footer';
 import styles from './../styles/news/SelectedNew.module.css';
 import { Link } from 'react-router-dom';
-import {data} from './../Data';
+import { data } from './../Data';
 
 function SelectedNew() : JSX.Element {
 
@@ -23,8 +23,12 @@ function SelectedNew() : JSX.Element {
     const dataLength : number = data.length;
     const elem : dataElement = data[dataLength - newsNumber - 1];
 
+    function toTheTop() {
+        window.scrollTo({top: 0, behavior: 'smooth'});
+    }
+        
     return (
-        <div>
+        <div onLoad={toTheTop}>
             <Navbar />
             <div className={styles.container}>
                 <h1>{elem.title}</h1>
