@@ -2,17 +2,24 @@ import styles from './../styles/news/NewsContent.module.css';
 import {Link} from 'react-router-dom';
 import {data} from './../Data';
 import algoliasearch from 'algoliasearch/lite';
-import { InstantSearch, SearchBox, Hits } from 'react-instantsearch-hooks-web';
+import { InstantSearch, SearchBox, Hits, useInstantSearch } from 'react-instantsearch-hooks-web';
+import 'instantsearch.css/themes/satellite.css';
 
+function EmptyQueryBoundary({ children, fallback } : any) {
+    const { indexUiState } = useInstantSearch();
+    if (!indexUiState.query) {
+      return fallback;
+    }
+    return children;
+  }
 
 function Hit({ hit } : any) : JSX.Element {
     return (
-    <article>
-        <h1>{hit.title}</h1>
-    </article>
+        <article className={styles.articleSearch}>
+            <Link className={styles.link} to={`/news/${hit.id}`}><h1 className={styles.titleSearch}>{hit.title}</h1></Link>
+        </article>
     );
 }
-
 
 function News() : JSX.Element {
 
@@ -38,10 +45,14 @@ function News() : JSX.Element {
                 <h1>Latest news</h1>
                 <h1 className={styles.highlight}>Updates</h1>
                 <p>Look for something interesting to you.</p>
+
                 <InstantSearch searchClient={searchClient} indexName="Priorice">
-                    <SearchBox />
-                    <Hits hitComponent={Hit}/>
+                    <SearchBox className={styles.searchBox}/>
+                    <EmptyQueryBoundary fallback={null}>
+                        <Hits className={styles.hits} hitComponent={Hit}/>
+                    </EmptyQueryBoundary>
                 </InstantSearch>
+
                 <img className={styles.bell} alt="bell" src="./../../images/news/bell.png"/>
                 <img className={styles.bulb} alt="light bulb" src="./../../images/news/lightbulb.png"/>
                 <img className={styles.leftDecoration} alt="left decoration" src="./../../images/news/vector_left.png"/>

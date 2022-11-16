@@ -41,21 +41,27 @@
     color: #777777;
 }
 
-.search {
-    background:  no-repeat url("./../../../public/images/news/mag_glass.png") #F1F1F1;
-    background-position: 5% 50%;
-    width: 70%;
-    height: 49px;
-    max-width: 300px;
-    border: 0;
-    padding: 1em 3em;
-    color: #727272;
-    position: relative;
-    border-radius: 0.5rem;
+.hits {
 }
 
-.glass {
-    display: block;
+.articleSearch {
+    padding: 0 !important;
+}
+
+.titleSearch {
+    font-size: 1.3rem !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    color:#383838;
+    text-align: left;
+    padding-bottom: 1em !important;
+}
+
+.titleSummary {
+    font-size: 1rem !important;
+    text-align: left;
+    margin: 0 !important;
+    line-height: 1.5 !important;
 }
 
 .bell {
