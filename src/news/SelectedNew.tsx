@@ -23,7 +23,7 @@ function SelectedNew() : JSX.Element {
     const dataLength : number = data.length;
     const elem : dataElement = data[dataLength - newsNumber - 1];
 
-    function toTheTop() {
+    function toTheTop() : void {
         window.scrollTo({top: 0, behavior: 'smooth'});
     }
         
