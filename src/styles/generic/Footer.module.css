@@ -65,30 +65,34 @@
 .searchButton {
     display: flex;
     justify-content: center;
+    flex-direction: column;
     align-items: center;
     margin-bottom: 2rem;
     margin-left: auto;
     margin-right: auto;
-    width: 80%;
-}
-
-.searchButton > input {
-    height: 2em;
     width: 85%;
 }
 
-.searchButton > button {
-    background-color: #6E00FA;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-sizing: border-box;
-    border-width: 0;
-    border-radius: 0.3em;
-    height: 2em;
-    padding: 0.1em 0.5em;
-    cursor: pointer;
-    width: 15%;
+.articleSearch {
+    padding: 0 !important;
+}
+
+.titleSearch {
+    font-size: 0.8rem !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    color:#383838;
+    text-align: left;
+    padding-bottom: 1em !important;
+}
+
+.link {
+    color: inherit;
+}
+
+.link:hover {
+    text-decoration: underline;
+    color:#383838;
 }
 
 .search > h4 {
@@ -106,6 +110,7 @@
     width: 80%;
     font-size: 0.8rem;
 }
+
 
 .social {
     width: 50%;
