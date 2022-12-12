@@ -6,13 +6,25 @@ import {Alert} from 'react-bootstrap';
 function Subscribe() : JSX.Element {
 
     const [formSubmitted, setFormSubmitted] = useState<boolean>(false);
+    const [email, setEmail] = useState<string>("");
+    const [response, setResponse] = useState<Response|null>(null);
     const [recaptchaResponse, setRecaptchaResponse] = useState<String>("");
     const recaptchaRef = useRef(null);
 
-    function handleSubmit(event : React.FormEvent) {
+    async function handleSubmit(event : React.FormEvent) {
         event.preventDefault();
         if (recaptchaResponse !== "") {
-            setFormSubmitted(true);
+            const response = await fetch('https://8080-cs-955919841324-default.cs-us-east1-pkhd.cloudshell.dev/news', {
+                method: 'POST',
+                body: JSON.stringify({
+                    email: email
+                })
+            });
+            setResponse(response);
+
+            if (response.ok) {
+                setFormSubmitted(true);
+            }
         }
     }
 
@@ -33,7 +45,7 @@ function Subscribe() : JSX.Element {
                     Thanks for registering!
                 </Alert>
                 :
-                <form onSubmit={handleSubmit} className={styles.register} method='POST' action='https://8080-cs-955919841324-default.cs-us-east1-pkhd.cloudshell.dev/news'>
+                <form onSubmit={handleSubmit} className={styles.register}>
                     <div className={styles.recaptcha}>
                         <ReCAPTCHA 
                             ref={recaptchaRef}
@@ -42,7 +54,7 @@ function Subscribe() : JSX.Element {
                             onChange={handleOnChange}
                         />
                     </div>
-                    <input name="email" id="email" type="email" placeholder='Enter email address'/>
+                    <input name="email" id="email" type="email" onChange={e => setEmail(e.target.value)} placeholder='Enter email address'/>
                     <input type="submit" value='Register'/>
                 </form>
                 }
