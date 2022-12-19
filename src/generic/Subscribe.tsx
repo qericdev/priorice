@@ -14,11 +14,12 @@ function Subscribe() : JSX.Element {
     async function handleSubmit(event : React.FormEvent) {
         event.preventDefault();
         if (recaptchaResponse !== "") {
-            const response = await fetch('https://8080-cs-955919841324-default.cs-us-east1-pkhd.cloudshell.dev/news', {
+            const response = await fetch('https://pure-chamber-05724.herokuapp.com/news', {
                 method: 'POST',
-                body: JSON.stringify({
-                    email: email
-                })
+                headers: {
+                'Content-Type': 'application/x-www-form-urlencoded'
+                },
+                body: `email=${encodeURIComponent(email)}`
             });
             setResponse(response);
 
